@@ -3,7 +3,7 @@ import google.generativeai as genai
 import time
 
 # --- SETUP AI ---
-API_KEY = "AIzaSyB3ji1nrZ2a9GgmX5gC0gOXLWUe2sCOiZI"
+API_KEY = st.secrets["azzriel_ai_api_key"]
 genai.configure(api_key=API_KEY)
 
 st.set_page_config(page_title="(AI) Azzriel Intelligence v3.0", page_icon="💀")
@@ -107,4 +107,5 @@ else:
     
     if st.button("👹 ABORT MISSION (IF YOU CAN)"):
         st.session_state.prank_active = False
+
         st.rerun()
